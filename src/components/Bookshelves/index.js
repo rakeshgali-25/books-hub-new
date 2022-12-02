@@ -113,7 +113,7 @@ class Bookshelves extends Component {
       return (
         <div>
           <img
-            src="https://assets.ccbp.in/frontend/react-js/meetup/not-found-img.png"
+            src="https://res.cloudinary.com/dlkkbb6xc/image/upload/v1669640482/Group_ghmllt.jpg"
             alt="no books"
             className="failure-img"
           />
@@ -133,7 +133,7 @@ class Bookshelves extends Component {
   renderFailure = () => (
     <div className="failure-container">
       <img
-        src="https://assets.ccbp.in/frontend/react-js/meetup/not-found-img.png"
+        src="https://res.cloudinary.com/dlkkbb6xc/image/upload/v1669640501/Group_7522_rnypy7.jpg"
         alt="failure view"
         className="failure-img"
       />
