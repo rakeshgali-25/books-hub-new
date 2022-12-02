@@ -52,7 +52,7 @@ class Home extends Component {
 
   onClickFindBooks = () => {
     const {history} = this.props
-    history.replace('/books')
+    history.replace('/shelf')
   }
 
   renderLoading = () => (

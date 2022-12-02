@@ -17,7 +17,7 @@ const ReactSlick = props => {
     <ul className="slider-container">
       <Slider {...settings} className="slider">
         {booksList.map(each => (
-          <li className="top-rated-list-item" key={each.id}>
+          <li className="top-rated-list-item" key={each.title}>
             <Link to={`/books/${each.id}`} className="link">
               <div className="image-container">
                 <img

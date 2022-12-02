@@ -87,7 +87,7 @@ class Bookshelves extends Component {
   }
 
   renderLoading = () => (
-    <div className="loader-container">
+    <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
     </div>
   )
@@ -108,7 +108,19 @@ class Bookshelves extends Component {
   }
 
   renderSuccess = () => {
-    const {booksList} = this.state
+    const {booksList, searchInput} = this.state
+    if (booksList.length === 0) {
+      return (
+        <div>
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/meetup/not-found-img.png"
+            alt="no books"
+            className="failure-img"
+          />
+          <p>Your search for {searchInput} did not find any matches.</p>
+        </div>
+      )
+    }
     return (
       <ul className="books-ul-list-container">
         {booksList.map(each => (
@@ -160,7 +172,9 @@ class Bookshelves extends Component {
           <BooksFilterContainer onClickShelf={this.onClickShelf} />
           <div className="books-list-container">
             <div className="top-search-container">
-              <p className="title-name-header">{label} Books</p>
+              <h1 className="title-name-header">
+                <label>{label}</label> Books
+              </h1>
               <div className="search-container">
                 <input
                   type="search"
@@ -172,6 +186,7 @@ class Bookshelves extends Component {
                 <div className="search-icon">
                   <button
                     type="button"
+                    testid="searchButton"
                     className="search-button"
                     onClick={this.onClickSearch}
                   >

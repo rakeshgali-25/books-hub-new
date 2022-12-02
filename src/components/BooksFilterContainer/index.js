@@ -41,7 +41,7 @@ class BooksFilterContainer extends Component {
 
     return (
       <div className="filter-container">
-        <p className="title-name">Bookshelves</p>
+        <h1 className="title-name">Bookshelves</h1>
         <ul className="filter-list">
           {bookshelvesList.map(each => {
             const activeBtn = activeId === each.value ? 'active' : ''

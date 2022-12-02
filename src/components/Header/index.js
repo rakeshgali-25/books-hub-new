@@ -29,7 +29,7 @@ const Header = props => {
             </li>
 
             <li className="nav-menu-item">
-              <Link to="/books" className="nav-link">
+              <Link to="/shelf" className="nav-link">
                 Bookshelves
               </Link>
             </li>
